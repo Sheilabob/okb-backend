@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "biographies",
+  "info": {
+    "singularName": "biography",
+    "pluralName": "biographies",
+    "displayName": "biography",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "credential": {
+      "type": "string",
+      "required": false
+    },
+    "bio": {
+      "type": "richtext"
+    },
+    "pics": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "topfeature": {
+      "type": "boolean",
+      "default": false
+    },
+    "specialty": {
+      "type": "dynamiczone",
+      "components": [
+        "credential.singlespecialty"
+      ]
+    },
+    "experience": {
+      "type": "dynamiczone",
+      "components": [
+        "credential.exp"
+      ]
+    }
+  }
+}
