@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "biographies",
+  "collectionName": "therapist_biographies",
   "info": {
-    "singularName": "biography",
-    "pluralName": "biographies",
-    "displayName": "biography",
+    "singularName": "therapist-biography",
+    "pluralName": "therapist-biographies",
+    "displayName": "Therapist Biography",
     "description": ""
   },
   "options": {
@@ -17,37 +17,36 @@
       "required": true
     },
     "credential": {
-      "type": "string",
-      "required": false
+      "type": "string"
     },
     "bio": {
       "type": "richtext"
     },
-    "topfeature": {
-      "type": "boolean",
-      "default": false
-    },
-    "specialty": {
-      "type": "dynamiczone",
-      "components": [
-        "credential.singlespecialty"
-      ]
-    },
-    "experience": {
-      "type": "dynamiczone",
-      "components": [
-        "credential.exp"
-      ]
-    },
     "pics": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "topfeature": {
+      "type": "boolean"
+    },
+    "specialty": {
+      "type": "dynamiczone",
+      "components": [
+        "credential.singlecredential"
+      ]
+    },
+    "experience": {
+      "type": "dynamiczone",
+      "components": [
+        "credential.experience"
+      ]
     }
   }
 }
